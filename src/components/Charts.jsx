@@ -2,6 +2,9 @@ import React from "react";
 import Chart from "./Chart";
 
 const Charts = ({ coinData }) => {
+  const darkMode = window.localStorage.getItem('Dark Mode')
+  const lineColor = JSON.parse(darkMode) ? '#f68819' : '#8884d8'
+  
   return (
     <div className="charts">
       {coinData.map(coin => (
@@ -11,7 +14,7 @@ const Charts = ({ coinData }) => {
           <div className="coin__logo">
             <img src={coin.image} height="40" alt={coin.name} />
           </div>
-          <Chart sparklineData={coin.sparkline_in_7d.price} />
+          <Chart sparklineData={coin.sparkline_in_7d.price} lineColor={lineColor}/>
         </div>
       ))}
     </div>
