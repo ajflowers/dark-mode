@@ -16,8 +16,6 @@ const useDarkMode = initialValue => {
         Array.prototype.forEach.call(chartDots, function(dot) {
             dot.setAttribute('stroke', displayMode ? '#f68819' : '#8884d8')
         })
-
-
     }, [displayMode])
 
     return [displayMode, setDisplayMode]

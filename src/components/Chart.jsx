@@ -11,10 +11,9 @@ import {
 
 const Chart = ({ sparklineData }) => {
   const darkMode = window.localStorage.getItem('Dark Mode')
-  console.log(darkMode)
+  // console.log(darkMode)
   const lineColor = JSON.parse(darkMode) ? '#f68819' : '#8884d8'
   
-
   const formattedData = sparklineData
     .map((price, idx) => {
       if (idx % 6 === 0) {

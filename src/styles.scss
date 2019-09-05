@@ -187,6 +187,8 @@ img {
   height: 20px;
   position: relative;
   width: 40px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .toggle {
@@ -250,4 +252,9 @@ text-align: left;
     background-color: #1F2022;
     border: none;
   }
+}
+
+.dark-mode-wrapper {
+  display: flex;
+  align-items: center;
 }

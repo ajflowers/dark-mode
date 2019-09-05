@@ -10,11 +10,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
-      <div className="dark-mode__toggle">
-        <div
-          onClick={toggleMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}
-        />
+      <div className="dark-mode-wrapper">
+        <span>Dark Mode:    </span>
+        <div className="dark-mode__toggle" onClick={toggleMode}>
+          <div className={darkMode ? 'toggle toggled' : 'toggle'} />
+        </div>
       </div>
     </nav>
   );
